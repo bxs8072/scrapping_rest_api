@@ -1,0 +1,103 @@
+// GET => /popular/:page || /dub/:page || /movies/:page || /newseason/:page
+    
+    Resonse:
+    [
+        {
+            title,
+            image,
+            link,
+            released
+        }
+    ]
+
+
+// GET => /latestanime/:page
+  
+    Resonse:
+    [
+        {
+            title,
+            image,
+            link,
+            latestEpisode
+        }
+    ]
+
+    
+// POST => /search
+    keyword = "anime name"
+
+    postRequest = {"keyword": keyword}
+
+    Resonse:
+    [
+        {
+            title,
+            image,
+            link,
+            released
+        }
+    ]
+
+// POST => /genre
+    genreName = "Action", "Adventure".....
+    page = 1,2,3.....
+
+
+    postRequest = {"genre": genreName, "page": pageNumber}
+
+    Resonse:
+    [
+        {
+            title,
+            image,
+            link,
+            released
+        }
+    ]
+
+// POST => /season
+    seasonName = "Spring 2020 Anime", "Fall 2020 Anime", "OVA", "ONA", "Special", "TV-Series".....
+    page = 1,2,3.....
+
+    postRequest = {"season": seasonName, "page": pageNumber}
+
+    Resonse:
+    [
+        {
+            title,
+            image,
+            link,
+            released
+        }
+    ]
+
+//POST => /detail
+        link = animeLink
+
+        postRequest = {"link": animeLink}
+
+        Response:
+        { 'season': season,
+            'description': description,
+            'status': status,
+            'otherName': otherName,
+            'genreList': ['Action', 'Adventure' ....],
+            'episodeList': [
+                {"episodeTitle": "Episode 1",
+                 "episodeLink": "episodeLink",                
+                }
+                .......
+            ]
+        }
+
+//POST => /iframe
+    link = episodeLink
+
+    postRequest = {"link": episodeLink}
+
+    Resonse:
+         {
+            'iframeLink': iframeLink,
+            'downloadLink': downloadLink
+         }

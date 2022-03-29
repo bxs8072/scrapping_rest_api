@@ -2,13 +2,13 @@ const express = require('express')
 const axios = require('axios').default
 const parse = require('node-html-parser').parse
 
-const router = express.Router();
+const router = express.Router()
 
 router.post('/', (req, res, next) => {
     var link = req.body.link
 
     axios.get(link).then(response => {
-        var document = parse(response.data);
+        var document = parse(response.data)
 
         var iframeLink = "https:" + document.querySelector('div.play-video iframe').attributes['src']
 
